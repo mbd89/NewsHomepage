@@ -1,0 +1,330 @@
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+    padding-block-end: 10vh;
+
+}
+
+main {
+    display: grid;
+    place-items: center;
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+button {
+    letter-spacing: 0.31em;
+    font-weight: 700;
+    color: white;
+    background: #F15D51;
+    padding: 1.5em 2.0625em;
+    border: none;
+}
+
+button:hover {
+    background: #00001A;
+    color: white;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: min(69.375em, calc(100% - 2em));
+    margin-inline: auto;
+    display: grid;
+    gap: 3em;
+  
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+li a {
+    color: #5E607A;
+    font-size: 0.9375em;
+}
+
+li a:hover {
+    color: #F15D51;
+}
+
+/* End of Global styles here */
+
+
+h1 {
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    color: #5E607A;
+    padding-block-end: 24px;
+
+}
+
+.hero-image-section {
+    display: grid;
+    gap: 24px;
+}
+
+.features-section {
+    display: grid;
+    gap: 4em;
+}
+
+/* New Section Styling  */
+.new {
+    padding: 1.5em 1.25em;
+    background: #00001A;
+}
+
+.title-new h2 {
+    color: #E9AA52;
+    font-weight: bold;
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.9rem + 0.5vw, 2.5rem);
+}
+
+article {
+    padding-block: 1.6875em;
+}
+
+
+
+article:not(:last-of-type) {
+    border-block-end: 1px solid #5E607A;
+
+}
+
+article h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+    padding-block-end: 0.5em
+}
+
+article h3:hover {
+    color: #E9AA52;
+    cursor: pointer;
+}
+
+article p {
+    color: #C5C6CE;
+    font-size: 0.9375em;
+}
+
+/* End of New Section Styling   */
+
+
+/*Bottom section styling with laptops and games  */
+.product-section {
+    display: grid;
+    gap: 2em;
+}
+
+
+.product {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 1em;
+
+
+}
+
+.number {
+    font-size: 1.7em;
+    color: #C5C6CE;
+    font-weight: bold;
+   
+
+
+}
+
+.content h4 {
+    font-size: 1.125em;
+}
+
+.content h4:hover {
+    color: #F15D51;
+    cursor: pointer;
+}
+
+.content p {
+    color: #5E607A;
+    font-size: 0.9375em;
+}
+
+/* End of Bottom section styling with laptops and games  */
+
+
+@media screen and (min-width:320px) {
+    nav button {
+        background: white;
+        cursor: pointer;
+    }
+
+
+    .navX {
+        margin-inline-start: auto;
+    }
+
+    .navX:focus {
+        background: white;
+    }
+
+    .just-for-opacity {
+        position: fixed;
+        inset: 0;
+        background: #00001A;
+        opacity: 0.5;
+        
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0 0 0 7.5em;
+        background-color: white;
+        z-index: 1;
+        
+        
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .just-for-opacity {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: #00001A;
+        opacity: 0.5;
+    }
+
+    #btnOn:hover,
+    #btnX:hover {
+        background: white;
+    }
+
+
+    nav ul {
+        padding: 3em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        width: min(69.375em, calc(100% - 2em));
+        margin-inline: auto;
+        align-items: center;
+    }
+
+    h1 {
+        line-height: 1.4;
+    }
+
+    .nav2 {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .nav2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navX {
+        display: none;
+    }
+
+    .navOn {
+        display: none;
+    }
+
+
+    .features-section {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2em;
+    }
+
+    .product-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+        column-gap: 1em;
+
+    }
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        width: min(69.375em, calc(100% - 2em));
+        margin-inline: auto;
+        padding-block-start: 3em;
+
+    }
+    h1{
+        font-weight: 800;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .features-section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+    .hero-image img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .web3 {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    h1 {
+        line-height: 1.2;
+    }
+
+
+}
